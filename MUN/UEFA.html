@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA | Model United Nations Conference</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Ccircle%20cx='32'%20cy='32'%20r='30'%20fill='%23D4AF37'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        .hero-image-overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .text-gold {
+            color: #D4AF37;
+        }
+        
+        .bg-pastel-blue {
+            background-color: #E6F2FF;
+        }
+        
+        .border-gold {
+            border-color: #D4AF37;
+        }
+
+       .button-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+       }
+
+    .golden-button {
+      touch-action: manipulation;
+      display: inline-block;
+      outline: none;
+      font-family: inherit;
+      font-size: 1em;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 0.3em;
+      height: 2.75em;
+      line-height: 2.5em;
+      text-transform: uppercase;
+      padding: 0 1em;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+                  0 3px 6px rgba(110, 80, 20, 0.4),
+                  inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+                  inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+      background-image: linear-gradient(
+        160deg,
+        #a54e07,
+        #b47e11,
+        #fef1a2,
+        #bc881b,
+        #a54e07
+      );
+      border: 1px solid #a55d07;
+      color: rgb(120, 50, 5);
+      text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      background-size: 100% 100%;
+      background-position: center;
+    }
+
+    .golden-button:focus,
+    .golden-button:hover {
+      background-size: 150% 150%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+                  0 6px 6px rgba(0, 0, 0, 0.23),
+                  inset 0 -2px 5px 1px #b17d10,
+                  inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+      border: 1px solid rgba(165, 93, 7, 0.6);
+      color: rgba(120, 50, 5, 0.8);
+    }
+
+    .golden-button:active {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+                  0 3px 6px rgba(110, 80, 20, 0.4),
+                  inset 0 -2px 5px 1px #b17d10,
+                  inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Hero Section with Community Name -->
+    <header class="relative h-96 overflow-hidden">
+        <img src="data:image/jpeg;base64,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" alt="Conference room with UN flags in background, professional diplomats discussing at a Model United Nations event" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 hero-image-overlay flex items-center justify-center">
+            <div class="text-center px-4">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">UEFA</h1>
+                <p class="text-xl text-gray-200">Agenda: Preventing the Formation of Breakaway Leagues.
+
+</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- About the Community Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">About Our MUN Community</h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <img src="https://e0.365dm.com/20/03/768x432/skysports-ceferin-uefa-aleksander-ceferin_4936196.jpg?20200302080817" alt="Diverse group of students engaged in a MUN committee session, some standing to speak at the podium" class="rounded-lg shadow-lg w-full" />
+            </div>
+            <div>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    The UEFA (Union of European Football Associations) governs European football, overseeing competitions, regulations, and development programs. In MUN-style simulations, delegates debate issues such as financial fair play, racism and discrimination in football, commercialization, player rights, and the expansion of international tournaments.
+                </p>
+                <p class="text-gray-600 mb-4 leading-relaxed">   
+                    👉 In MUN, this means structured debates, drafting reforms, proposing resolutions, and voting—all focused on shaping the future of European football governance.
+                </p>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Founded in 1954, UEFA represents 55 national associations and plays a central role in managing tournaments like the UEFA Champions League and the European Championship while promoting football development across all levels.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-blue-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-600">Open to students ages 11+ from all academic backgrounds</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-blue-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-600">Quarterly conferences with different committee focus areas</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-5 w-5 text-blue-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-gray-600">Personalized mentorship from experienced delegates</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUN Process Section -->
+    <section class="py-16 bg-gray-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">The MUN Process</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">01</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Opening of the Session</h3>
+                    <p class="text-gray-600">
+                        The Speaker (Chairperson) calls the house to order, ensures discipline, and takes attendance. The agenda for discussion is officially announced.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">02</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Opening Speeches</h3>
+                    <p class="text-gray-600">
+                       Each delegate (representing a country) gives an opening statement, outlining their nation’s position, concerns, and goals on the agenda.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">03</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Moderated Debate</h3>
+                    <p class="text-gray-600">
+                       Delegates speak when recognized by the Chair. They present arguments, discuss human rights violations, propose solutions, and respond to other countries’ views.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">04</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Unmoderated Debate (Lobbying)</h3>
+                    <p class="text-gray-600">
+                     Delegates move around and interact informally to negotiate, build alliances, and start drafting resolutions or working papers together.
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">05</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"> Draft Presentation and Debate</h3>
+                    <p class="text-gray-600">
+                        The drafted resolutions are submitted to the Chair, and then debated in the committee. Delegates may propose amendments to strengthen or alter the draft.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">06</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"> Voting</h3>
+                    <p class="text-gray-600">
+                        The Speaker calls for a vote on the bills or resolutions. Delegates vote For, Against, or Abstain. A majority decides whether the proposal is passed.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md process-step transition-all duration-300">
+                    <div class="text-blue-600 text-xl font-bold mb-4">07</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3"> Closing of the Session</h3>
+                    <p class="text-gray-600">
+                        The Speaker announces the result, summarizes the discussion, and formally adjourns the session.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pastel-blue py-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-xl font-semibold mb-6">Connect With Us</h3>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.instagram.com/rismun5.0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="17.5" cy="6.5" r="0.6" fill="var(--gold)" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/RISMIRAROADCBSE/" aria-label="Facebook" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="Facebook">
+              <svg width="14" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 12.07C22 6.58 17.52 2 12.03 2 6.55 2 2.07 6.58 2.07 12.07c0 4.99 3.66 9.13 8.34 9.88v-6.99H8.08V12h2.33V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.9h-2.33v6.99c4.68-.75 8.34-4.89 8.34-9.88z" fill="var(--gold)" />
+              </svg>
+            </a>
+
+            <a href="https://www.youtube.com/c/RahulEducationSociety" aria-label="YouTube" class="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition-transform" title="YouTube">
+              <svg width="18" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.5 7.2a3 3 0 00-2.12-2.14C19.5 4.6 12 4.6 12 4.6s-7.5 0-9.38.46A3.01 3.01 0 00.5 7.2 31.68 31.68 0 000 12a31.68 31.68 0 00.5 4.8 3.01 3.01 0 002.12 2.14C4.5 19.4 12 19.4 12 19.4s7.5 0 9.38-.46a3.01 3.01 0 002.12-2.14A31.68 31.68 0 0024 12a31.68 31.68 0 00-.5-4.8z" fill="var(--gold)" />
+                <path d="M9.55 15.57V8.43L15.82 12l-6.27 3.57z" fill="#fff" opacity="0.95" />
+              </svg>
+            </a>
+            </div>
+            <p class="text-sm mb-2">Email: <a href="mailto:rismunitdepartment@gmail.com" class="text-gold hover:underline">rismunitdepartment@gmail.com</a></p>
+            <p class="text-sm">© 2023 Rahul International School MUN 5.0. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
